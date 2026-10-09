@@ -1,0 +1,27 @@
+{
+  "name": "repo-radar",
+  "version": "0.1.0",
+  "description": "Live map of the repo that lights up as Claude and its subagents read, edit and fail on files",
+  "author": {
+    "name": "Reno Angelo Banderlipe"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code-mod"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "autoOpen": {
+      "type": "boolean",
+      "title": "Open on session start",
+      "description": "Open the radar pane when a session starts (/radar always opens it)",
+      "default": false
+    },
+    "depth": {
+      "type": "number",
+      "title": "Folder depth",
+      "description": "How many folder levels the map always shows; touched files are expanded regardless",
+      "default": 2
+    }
+  }
+}

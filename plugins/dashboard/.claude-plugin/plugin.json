@@ -1,0 +1,27 @@
+{
+  "name": "dashboard",
+  "version": "0.1.0",
+  "description": "Live dashboard pane: subagents, activity, project, git and session usage",
+  "author": {
+    "name": "Reno Angelo Banderlipe"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code-mod"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "autoOpen": {
+      "type": "boolean",
+      "title": "Open on session start",
+      "description": "Open the dashboard pane when a session starts (/dashboard always opens it)",
+      "default": false
+    },
+    "refreshSeconds": {
+      "type": "number",
+      "title": "Refresh interval (seconds)",
+      "description": "How often git and usage figures refresh",
+      "default": 5
+    }
+  }
+}

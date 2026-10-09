@@ -1,0 +1,49 @@
+{
+  "name": "model-router",
+  "version": "0.1.0",
+  "description": "Routes prompts and subagents to a cheaper or stronger model by what they ask",
+  "author": {
+    "name": "Reno Angelo Banderlipe"
+  },
+  "license": "MIT",
+  "keywords": ["claude-code-mod"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "lightModel": {
+      "type": "string",
+      "title": "Light model",
+      "description": "Model id for routine commands and read-only subagents",
+      "default": "claude-haiku-5-5"
+    },
+    "standardModel": {
+      "type": "string",
+      "title": "Standard model",
+      "description": "Model id for short questions",
+      "default": "claude-sonnet-5-5"
+    },
+    "maxMessages": {
+      "type": "number",
+      "title": "Max messages",
+      "description": "Stop auto-routing the main thread past this many messages (a switch rebuilds the prompt cache)",
+      "default": 40
+    },
+    "lightAgents": {
+      "type": "string",
+      "title": "Light subagents",
+      "description": "Comma-separated subagent types sent to the light model",
+      "default": "Explore,claude-code-guide,statusline-setup"
+    },
+    "routeMainThread": {
+      "type": "boolean",
+      "title": "Route main thread",
+      "description": "Pick a model per prompt on the main thread",
+      "default": true
+    },
+    "routeSubagents": {
+      "type": "boolean",
+      "title": "Route subagents",
+      "description": "Send light subagents to the light model",
+      "default": true
+    }
+  }
+}

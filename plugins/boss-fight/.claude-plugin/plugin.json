@@ -1,0 +1,27 @@
+{
+  "name": "boss-fight",
+  "version": "0.1.0",
+  "description": "Failing lint, tests or typechecks spawn a boss above the prompt; each fix damages it",
+  "author": {
+    "name": "Reno Angelo Banderlipe"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code-mod"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "extraPatterns": {
+      "type": "string",
+      "title": "Extra command patterns",
+      "description": "Your own commands, tried before the built-ins: suite=regex;suite=regex (suites: lint, unit, int, db, e2e, typecheck). Example: unit=\\bjust test\\b;e2e=\\bmake smoke\\b",
+      "default": ""
+    },
+    "enabledSuites": {
+      "type": "string",
+      "title": "Suites that spawn bosses",
+      "description": "Comma-separated: lint, unit, int, db, e2e, typecheck",
+      "default": "lint,unit,int,db,e2e,typecheck"
+    }
+  }
+}

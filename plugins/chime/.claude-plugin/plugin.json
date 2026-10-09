@@ -1,0 +1,31 @@
+{
+  "name": "chime",
+  "version": "0.1.0",
+  "description": "Chimes and notifies when a long turn finishes or Claude waits on you",
+  "author": {
+    "name": "Reno Angelo Banderlipe"
+  },
+  "license": "MIT",
+  "keywords": ["claude-code-mod"],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "thresholdSeconds": {
+      "type": "number",
+      "title": "Long-turn threshold (seconds)",
+      "description": "Chime when a turn takes at least this long; /chime <seconds> overrides it",
+      "default": 45
+    },
+    "notify": {
+      "type": "boolean",
+      "title": "Send a notification",
+      "description": "Also send a desktop notification when a long turn finishes",
+      "default": true
+    },
+    "waitingSound": {
+      "type": "boolean",
+      "title": "Waiting chime",
+      "description": "Play a softer chime when Claude waits on you (permission or input)",
+      "default": true
+    }
+  }
+}

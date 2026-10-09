@@ -1,0 +1,46 @@
+{
+  "name": "claude-code-mods",
+  "owner": {
+    "name": "Reno Angelo Banderlipe"
+  },
+  "metadata": {
+    "description": "Cute and useful Claude Code mods: a pet, live panes, a boss fight, chimes and a model router"
+  },
+  "plugins": [
+    {
+      "name": "cute-feed",
+      "source": "./plugins/cute-feed",
+      "description": "A pet that hatches, grows and reacts to what Claude does, over a live emoji feed"
+    },
+    {
+      "name": "dashboard",
+      "source": "./plugins/dashboard",
+      "description": "Live pane: project, git, session usage, subagents and recent activity"
+    },
+    {
+      "name": "swarm",
+      "source": "./plugins/swarm",
+      "description": "Live tree of the session's subagents: who spawned whom and what each is doing"
+    },
+    {
+      "name": "repo-radar",
+      "source": "./plugins/repo-radar",
+      "description": "Map of the repo that lights up as files are read, edited or fail"
+    },
+    {
+      "name": "boss-fight",
+      "source": "./plugins/boss-fight",
+      "description": "Failing lint, tests or typechecks spawn a boss above the prompt; each fix damages it"
+    },
+    {
+      "name": "chime",
+      "source": "./plugins/chime",
+      "description": "Chimes and notifies when a long turn finishes or Claude waits on you"
+    },
+    {
+      "name": "model-router",
+      "source": "./plugins/model-router",
+      "description": "Routes prompts and subagents to a cheaper or stronger model by what they ask"
+    }
+  ]
+}

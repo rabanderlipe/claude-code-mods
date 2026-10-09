@@ -1,0 +1,49 @@
+{
+  "name": "cute-feed",
+  "version": "0.1.0",
+  "description": "A pet that hatches, grows and reacts to what Claude is doing, over a live emoji feed",
+  "author": {
+    "name": "Reno Angelo Banderlipe"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code-mod"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "autoOpen": {
+      "type": "boolean",
+      "title": "Open on session start",
+      "description": "Open the pet pane when a session starts (/feed always opens it)",
+      "default": true
+    },
+    "petName": {
+      "type": "string",
+      "title": "Pet name",
+      "description": "The name a brand-new pet gets (rename later with /feed name)",
+      "default": "Mochi"
+    },
+    "species": {
+      "type": "string",
+      "title": "Species",
+      "description": "The species a brand-new pet hatches as (change later with /feed species)",
+      "default": "cat",
+      "options": [
+        "cat",
+        "chick",
+        "dog",
+        "slime",
+        "bunny",
+        "hamster",
+        "penguin",
+        "frog"
+      ]
+    },
+    "dangerPatterns": {
+      "type": "string",
+      "title": "Extra danger patterns",
+      "description": "Extra ;-separated regexes for shell commands that make the pet panic (it never blocks them)",
+      "default": ""
+    }
+  }
+}

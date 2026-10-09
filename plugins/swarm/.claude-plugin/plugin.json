@@ -1,0 +1,21 @@
+{
+  "name": "swarm",
+  "version": "0.1.0",
+  "description": "Live map of the session's agent tree: who spawned whom and what each is doing",
+  "author": {
+    "name": "Reno Angelo Banderlipe"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code-mod"
+  ],
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "autoOpen": {
+      "type": "boolean",
+      "title": "Open on first subagent",
+      "description": "Open the swarm pane the first time a subagent starts in a session (/swarm always opens it)",
+      "default": true
+    }
+  }
+}
